@@ -5,18 +5,21 @@ body {
 }
 
 .container {
-    text-align: center;
-    margin-top: 120px;
-    z-index: 2;
     position: relative;
+    z-index: 5;
 }
+
 
 .cat {
     position: absolute;
-    width: 90px;
-    opacity: 0.85;
-    animation: floatCats 14s linear infinite;
+    width: 50px;
+    opacity: 0.7;
+    animation-name: floatCats;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
+
 
 .cat:nth-child(1) { left: 10%; animation-duration: 12s; }
 .cat:nth-child(2) { left: 45%; animation-duration: 15s; }
@@ -33,5 +36,20 @@ body {
     }
 }
 
+
+.cat:nth-child(1) {
+    left: 15%;
+    animation-duration: 22s;
+}
+
+.cat:nth-child(2) {
+    left: 45%;
+    animation-duration: 26s;
+}
+
+.cat:nth-child(3) {
+    left: 75%;
+    animation-duration: 24s;
+}
 
 
