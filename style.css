@@ -1,48 +1,97 @@
+
 body {
-    background: pink;
+    margin: 0;
+    padding: 0;
+    background: #ffc0cb;
     overflow: hidden;
     font-family: Arial, sans-serif;
 }
 
-.container {
-    position: relative;
-    z-index: 5;
-}
-.cats,
-.hearts {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+.center-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px 60px;
+    border-radius: 25px;
+    box-shadow: 0 0 25px rgba(255, 105, 135, 0.6);
 }
 
-.cats { z-index: 1; }
-.hearts { z-index: 2; }
+.center-box h1 {
+    margin-bottom: 15px;
+    font-size: 36px;
+}
+
+.center-box p {
+    font-size: 18px;
+    color: #ff4d6d;
+}
+
+/* ======================
+   BUTTONS
+====================== */
+.buttons {
+    margin-top: 25px;
+}
+
+button {
+    padding: 12px 28px;
+    font-size: 18px;
+    margin: 0 12px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:first-child {
+    background: #ff4d6d;
+    color: white;
+}
+
+button:first-child:hover {
+    transform: scale(1.1);
+}
+
+button:last-child {
+    background: #999;
+    color: white;
+}
+
+/* ======================
+   CATS (BACKGROUND)
+====================== */
 .cat {
     position: absolute;
-    width: 50px;
-    opacity: 0.7;
-    animation: floatCats 22s linear infinite;
+    width: 60px;
+    opacity: 0.75;
+    animation: floatCats linear infinite;
+    z-index: 1;
 }
+
 
 .heart {
     position: absolute;
-    font-size: 22px;
+    font-size: 24px;
     opacity: 0.7;
-    animation: floatCats 20s linear infinite;
+    animation: floatCats linear infinite;
+    z-index: 1;
 }
+
 .cat:nth-child(1) { left: 10%; animation-duration: 22s; }
-.cat:nth-child(2) { left: 45%; animation-duration: 26s; }
-.cat:nth-child(3) { left: 75%; animation-duration: 24s; }
-.heart:nth-child(1) { left: 12%; animation-duration: 20s; }
-.heart:nth-child(2) { left: 25%; animation-duration: 24s; }
-.heart:nth-child(3) { left: 38%; animation-duration: 21s; }
-.heart:nth-child(4) { left: 52%; animation-duration: 26s; }
-.heart:nth-child(5) { left: 66%; animation-duration: 23s; }
-.heart:nth-child(6) { left: 80%; animation-duration: 25s; }
-.heart:nth-child(7) { left: 92%; animation-duration: 22s; }
+.cat:nth-child(2) { left: 35%; animation-duration: 26s; }
+.cat:nth-child(3) { left: 60%; animation-duration: 24s; }
+.cat:nth-child(4) { left: 85%; animation-duration: 28s; }
+
+.heart:nth-child(5) { left: 15%; animation-duration: 18s; }
+.heart:nth-child(6) { left: 45%; animation-duration: 20s; }
+.heart:nth-child(7) { left: 70%; animation-duration: 22s; }
+.heart:nth-child(8) { left: 90%; animation-duration: 19s; }
+
+
 @keyframes floatCats {
     0% {
         top: 110%;
@@ -50,7 +99,7 @@ body {
     }
     100% {
         top: -20%;
-        transform: translateX(40px) rotate(360deg);
+        transform: translateX(50px) rotate(360deg);
     }
 }
 
