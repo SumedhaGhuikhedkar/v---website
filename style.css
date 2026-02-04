@@ -8,32 +8,41 @@ body {
     position: relative;
     z-index: 5;
 }
+.cats,
+.hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
 
-
+.cats { z-index: 1; }
+.hearts { z-index: 2; }
 .cat {
     position: absolute;
     width: 50px;
     opacity: 0.7;
-    animation-name: floatCats;
-    animation-duration: 20s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    animation: floatCats 22s linear infinite;
 }
+
 .heart {
     position: absolute;
     font-size: 22px;
     opacity: 0.7;
-    animation-name: floatCats; /* SAME animation */
-    animation-duration: 18s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    animation: floatCats 20s linear infinite;
 }
-
-
-.cat:nth-child(1) { left: 10%; animation-duration: 12s; }
-.cat:nth-child(2) { left: 45%; animation-duration: 15s; }
-.cat:nth-child(3) { left: 75%; animation-duration: 13s; }
-
+.cat:nth-child(1) { left: 10%; animation-duration: 22s; }
+.cat:nth-child(2) { left: 45%; animation-duration: 26s; }
+.cat:nth-child(3) { left: 75%; animation-duration: 24s; }
+.heart:nth-child(1) { left: 12%; animation-duration: 20s; }
+.heart:nth-child(2) { left: 25%; animation-duration: 24s; }
+.heart:nth-child(3) { left: 38%; animation-duration: 21s; }
+.heart:nth-child(4) { left: 52%; animation-duration: 26s; }
+.heart:nth-child(5) { left: 66%; animation-duration: 23s; }
+.heart:nth-child(6) { left: 80%; animation-duration: 25s; }
+.heart:nth-child(7) { left: 92%; animation-duration: 22s; }
 @keyframes floatCats {
     0% {
         top: 110%;
@@ -44,22 +53,4 @@ body {
         transform: translateX(40px) rotate(360deg);
     }
 }
-
-
-.cat:nth-child(1) {
-    left: 15%;
-    animation-duration: 22s;
-}
-
-.cat:nth-child(2) {
-    left: 45%;
-    animation-duration: 26s;
-}
-
-.cat:nth-child(3) {
-    left: 75%;
-    animation-duration: 24s;
-}
-
-
 
