@@ -23,7 +23,15 @@ body {
 .cat:nth-child(3) { left: 75%; animation-duration: 13s; }
 
 @keyframes floatCats {
-    0% { top: 100%; transform: rotate(0deg); }
-    100% { top: -10%; transform: rotate(360deg); }
+    0% {
+        top: 110%;
+        transform: translateX(0) rotate(0deg);
+    }
+    100% {
+        top: -20%;
+        transform: translateX(40px) rotate(360deg);
+    }
 }
+
+
 
