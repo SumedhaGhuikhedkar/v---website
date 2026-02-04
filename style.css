@@ -1,17 +1,45 @@
 body {
+    margin: 0;
+    padding: 0;
     background-color: #ffe6ea;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: Arial, sans-serif;
 }
 
 .container {
-    background: white;
-    padding: 30px;
+    background-color: white;
+    padding: 30px 40px;
     border-radius: 15px;
     text-align: center;
+    box-shadow: 0 0 15px rgba(255, 105, 135, 0.5);
+}
+
+button {
+    padding: 12px 20px;
+    margin: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:first-child {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+button:last-child {
+    background-color: #cccccc;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #ff4d6d;
+    font-weight: bold;
 }
 
 
